@@ -136,13 +136,12 @@ Submit cart data
     "itemCount": 2
   }
 }
-##  Screenshots
 
-[Add screenshots here]
+## Developer
 
-##  Developer
-
-[Your Name]
+Anshika Singh Bisen
+B.Tech CSE Student  
+GitHub: https://github.com/anshika997
 
 
 ```
