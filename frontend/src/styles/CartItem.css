@@ -1,0 +1,148 @@
+.cart-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cart-item-name {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.cart-item-price {
+  font-size: 1.1rem;
+  color: #d4af37;
+  font-weight: 500;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 0.3rem;
+}
+
+.quantity-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: white;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.quantity-btn:hover {
+  background: #d4af37;
+  color: white;
+}
+
+.quantity-btn:active {
+  transform: scale(0.95);
+}
+
+.quantity-value {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.cart-item-total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  min-width: 120px;
+  text-align: right;
+}
+
+.remove-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #fee;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: #e74c3c;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-item-actions {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .cart-item-name {
+    font-size: 1rem;
+  }
+
+  .cart-item-price {
+    font-size: 0.95rem;
+  }
+
+  .cart-item-total {
+    font-size: 1.1rem;
+    min-width: auto;
+  }
+}

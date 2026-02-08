@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    container_name: naksh-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    networks:
+      - naksh-network
+
+  frontend:
+    build: ./frontend
+    container_name: naksh-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://backend:5000
+    networks:
+      - naksh-network
+
+networks:
+  naksh-network:
+    driver: bridge
